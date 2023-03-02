@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>上传文件示例程序</title>
+</head>
+<body>
+<div id="fileUpload">
+<form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data" target="hidden_iframe">
+<p>
+<input type="hidden" name="PHP_SESSION_UPLOAD_PROGRESS" value="file1" />
+<input type="file" name="demo">
+<input type="submit" value="上传">
+</p>
+</form>
+</div>
+<iframe name="hidden_iframe" src="about:blank" style="display:none;"></iframe>
+<div id="process"> 上传进度：<span id="percent"></span>
+</div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+function fetch_progress(){
+$.get('progress.php',{"key":"file1"}, function(data){
+document.getElementById("percent").innerText = data+"%";
+if(data == 100){
+return;
+}else{
+setTimeout(fetch_progress,100);
+}
+});
+}
+$('#upload-form').submit(function(){
+setTimeout(fetch_progress,100);
+});
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>上传文件示例程序</title>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="external nofollow" >
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="width: 400px;margin-top: 30px;margin-left: 30px;">
+<div id="fileUpload">
+<form class="form-horizontal" role="form" id="upload-form" action="upload.php" method="post" enctype="multipart/form-data" target="hidden_iframe">
+<input type="hidden" name="PHP_SESSION_UPLOAD_PROGRESS" value="file1" />
+<div class="form-group">
+<div class="col-sm-8" style="margin-top: 7px;">
+<input type="file" name="demo" >
+</div>
+<div class="col-sm-4">
+<button type="submit" class="btn btn-primary btn-sm">上传文件</button>
+</div>
+</div>
+</form>
+</div>
+<iframe name="hidden_iframe" src="about:blank" style="display:none;"></iframe>
+<div class="progress" style="display: none;">
+<div id="percent" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+0%
+</div>
+</div>
+</div>
+</body>
+<script>
+function fetch_progress(){
+$.get('progress.php',{"key":"file1"}, function(data){
+document.getElementById("percent").innerText = data+"%";
+document.getElementById("percent").setAttribute("style","width:"+data+"%;");
+document.getElementsByClassName("progress")[0].setAttribute("style","display: block;");
+if(data == 100){
+return;
+}else{
+setTimeout(fetch_progress,100);
+}
+});
+}
+$('#upload-form').submit(function(){
+setTimeout(fetch_progress,100);
+});
+</script>
+</html>

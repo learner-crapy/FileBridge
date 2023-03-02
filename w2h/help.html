@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>W2H</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body><!-- Sidenav-->
+<nav
+  id="sidenav-5"
+  class="sidenav"
+  data-mdb-accordion="true"
+>
+<div class="text-center">
+  <h3 class="py-4">导航</h3>
+  <hr class="m-0" />
+</div>
+  <ul class="sidenav-menu">
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="uploadfile.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>上传文件</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="multiple_upload.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>批量上传</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="index.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>单项</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="multiple.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>批量</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="./utf8-php/index.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>富文本</span></a
+      >
+    </li>
+
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="html_action.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>列表</span></a
+      >
+    </li>
+
+    <li class="sidenav-item">
+      <a class="sidenav-link"
+        ><i class="fas fa-grin fa-fw me-3"></i><span>历史</span></a
+      >
+      <ul class="sidenav-collapse scroll-section">
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="single_history.html">单项历史</a>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="muti_history.html">批量历史</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="help.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>帮助</span></a
+      >
+    </li>
+    
+  </ul>
+</nav>
+<!-- Sidenav-->
+
+<!-- Toggler -->
+  <button
+    data-mdb-toggle="sidenav"
+    data-mdb-target="#sidenav-5"
+    class="btn btn-primary"
+    aria-controls="#sidenav-5"
+    aria-haspopup="true"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
+<!-- Toggler -->
+    <div class="container">
+        <h1 style="line-height: 52.256px;text-align: center;">使用帮助</h1>
+        <div>
+            <p>1、关于word转换为html，是一个难点问题，尝试了java、php、js、python等都有瑕疵，google文档转换的结果也不尽人意，存在样式改变、图片丢失的问题，对于此，采用富文本来解决此问题，富文本采用的百度UEditor，操作方法如下：</p>
+        </div>
+        <div>
+            <p>（1）将word内容复制到富文本中，一般显示都会有问题，此时通过富文本编辑器进行调整；</p>
+        </div>
+        <div>
+            <p>（2）内容调整得差不多之后提交到数据库，然后通过导航栏到列表下进入查看选项，将网页另存为html则会得到比较好的布局，保存的文件可能存在多余内容，使用文本编辑器打开将其删除即可；</p>
+        </div><img src="assets/img/Snipaste_2022-03-26_10-29-08.png">
+        <div>
+            <p>（3）对于已编辑好的文档，支持在之前编辑的基础上再进行编辑；</p>
+        </div>
+        <div>
+            <p>2、一些使用注意事项</p>
+            <div>
+                <p>（1）对富文本进行更新时，由于插件原因，会出现不显示的情况，这时请刷新，一般刷新3-5次即可正常显示；</p>
+            </div>
+            <div>
+                <p>（2）在单项操作中，不要使用带中文符号的文件名，否则在单项历史删除时出现乱码，不能正确删除和重新下载，但不影响使用；</p>
+                <p>（3）上传文件下载之后包含html文件，但格式不佳，且有图片缺失，仅作参考；</p>
+                <p>（4）批量处理功能允许您上传多个文档，若上传文件存在违规类型文件，下载的文件中会有log.txt文件，可查看具体错误类型；</p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
+    <script src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/t_Canel.js"></script>
+    <script src="assets/js/t_get_parameter.js"></script>
+</body>
+
+</html>

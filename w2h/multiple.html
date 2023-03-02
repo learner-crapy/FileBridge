@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>W2H</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body><!-- Sidenav-->
+<nav
+  id="sidenav-5"
+  class="sidenav"
+  data-mdb-accordion="true"
+>
+<div class="text-center">
+  <h3 class="py-4">导航</h3>
+  <hr class="m-0" />
+</div>
+  <ul class="sidenav-menu">
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="uploadfile.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>上传文件</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="multiple_upload.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>批量上传</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="index.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>单项</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="multiple.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>批量</span></a
+      >
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="./utf8-php/index.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>富文本</span></a
+      >
+    </li>
+
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="html_action.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>列表</span></a
+      >
+    </li>
+
+    <li class="sidenav-item">
+      <a class="sidenav-link"
+        ><i class="fas fa-grin fa-fw me-3"></i><span>历史</span></a
+      >
+      <ul class="sidenav-collapse scroll-section">
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="single_history.html">单项历史</a>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="muti_history.html">批量历史</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="help.html">
+        <i class="far fa-smile fa-fw me-3"></i><span>帮助</span></a
+      >
+    </li>
+    
+  </ul>
+</nav>
+<!-- Sidenav-->
+
+<!-- Toggler -->
+  <button
+    data-mdb-toggle="sidenav"
+    data-mdb-target="#sidenav-5"
+    class="btn btn-primary"
+    aria-controls="#sidenav-5"
+    aria-haspopup="true"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
+<!-- Toggler -->
+    <div style="margin-top: 51px;">
+        <h1 style="text-align: center;">WORD-&gt;HTML&amp;XML批量在线工具</h1>
+    </div>
+    <form id="docx_doc" action="multi_upload_file.php" method="post" enctype="multipart/form-data">
+        <div><div class="file-upload-wrapper">
+  <input
+    id="dnd-multiple-files"
+    type="file"
+    name = "file[]"
+    class="file-upload-input"
+    data-mdb-multiple="true"
+    data-mdb-file-upload="file-upload"
+  />
+</div></div>
+        <div style="margin-top: 56px;"><button type="button" onclick="Canel()" class="btn btn-light btn-rounded col-1 offset-5">取消</button><button type="submit" name="submit" class="btn btn-primary btn-rounded col-1" style="margin-left:20px">上传</button></div>
+    </form>
+    <div><!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-mdb-backdrop="static"
+  data-mdb-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">文件下载</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="file_name"></div>
+      <div class="modal-footer">
+<!--         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">关闭</button> -->
+        <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="#" id="download">下载</a></button>
+      </div>
+    </div>
+  </div>
+</div></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
+    <script src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/t_Canel.js"></script>
+    <script src="assets/js/t_retiurn_mul.js"></script>
+    <script src="assets/js/t_get_parameter.js"></script>
+</body>
+
+</html>
